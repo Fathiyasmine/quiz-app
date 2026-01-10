@@ -1,0 +1,61 @@
+import { createContext, useContext, useState } from "react";
+
+//creation du context pour rendre disponible les donnes a tout le App
+const QuizContext = createContext();
+
+//creation des state et les rendre dispo pour tout les children, Provider : Composant qui "fournit" les données à tous ses enfants
+
+export const QuizProvider = ({ children }) => {
+  // États (variables qui peuvent changer)
+
+  const [currentQuiz, setCurrentQuiz] = useState(null);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedAnswers, setSelectedAnsewers] = useState([]);
+  const [timeRemaining, setTimeRemaining] = useState(0);
+  const [quizInProgress, setQuizInProgress] = useState(false); //quiz demarrer ou non
+  //fct appele pour demarrer un quiz
+  const startQuiz = (quiz) => {
+    setCurrentQuiz(quiz);
+    setCurrentQuestion(0);
+    setSelectedAnsewers([]);
+    setTimeRemaining(quiz.duration * 60);
+    setQuizInProgress(true);
+  };
+  //fct pour reondre a une qst
+  const selectAnswer = (questionIndex, answerIndex) => {
+    const newAnswers = [...selectedAnswers]; //copie avec thread operator
+    newAnswers[questionIndex] = answerIndex; //enregistre la reponse
+    setSelectedAnsewers(newAnswers); //mise a jour de letat
+
+    const nextQuestion = () => {
+      if (currentQuestion < currentQuiz.questions.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      }
+    };
+    const previousQuestion = () => {
+      if (currentQuestion > 0) {
+        setCurrentQuestion(currentQuestion - 1);
+      }
+    };
+    //fournir tout les donnes et fct aux composants enfants
+    return (
+      <QuizContext.Provider
+        value={{
+          currentQuiz,
+          currentQuestion,
+          selectedAnswers,
+          timeRemaining,
+          quizInProgress,
+          startQuiz,
+          selectAnswer,
+          nextQuestion,
+          previousQuestion,
+          setCurrentQuestion,
+        }}
+      >
+        {children}
+      </QuizContext.Provider>
+    );
+  };
+};
+export const useQuiz = () => useContext(QuizContext);

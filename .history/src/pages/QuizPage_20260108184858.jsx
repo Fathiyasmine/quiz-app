@@ -1,0 +1,25 @@
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  ArrowBack,
+  ArrowForward,
+  ArrowBack as ArrowLeft,
+} from "@mui/icons-material";
+import { useQuiz } from "../context/QuizContext";
+import { quizzes } from "../data/quizData";
+
+const QuizPage = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const {
+    currentQuiz,
+    currentQuestion,
+    selectedAnsewrs,
+    timeRemaining,
+    selectAnswer,
+    nextAnswer,
+    previousQuestion,
+    setCurrentQuestion,
+    startQuiz,
+  } = useQuiz();
+};
