@@ -18,7 +18,7 @@ const Header = () => {
         <div className="w-10 h-10 bg-white bg-opacity-30 rounded-full"></div>
       </div>
       <h2 className="text-2xl font-bold mb-2">{quiz.title}</h2>
-      <div className="flex items-center gap-56">
+      <div className="flex items-center gap-24">
         <p className="text-sm mb-4">GET {quiz.points} Points</p>
         <div className="flex items-center gap-1">
           <Star className="text-yellow-400" />
