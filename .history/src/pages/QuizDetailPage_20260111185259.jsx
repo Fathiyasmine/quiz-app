@@ -11,8 +11,6 @@ const QuizDetailPage = () => {
 
   const quiz = quizzes.find((q) => q.id === parseInt(id));
 
-  if (!quiz) return <div>Quiz not found</div>;
-
   const handleStartQuiz = () => {
     startQuiz(quiz);
     navigate(`/quiz/${id}/start`);

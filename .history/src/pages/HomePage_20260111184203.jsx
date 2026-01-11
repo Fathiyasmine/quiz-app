@@ -1,7 +1,7 @@
 import HeaderHomePage from "../components/Homepagecomponents/HeaderHomePage";
 import Categories from "../components/Homepagecomponents/Categories";
-import QuizList from "../components/Homepagecomponents/QuizList";
-import ContinueQuiz from "../components/Homepagecomponents/ContinueQuiz";
+import QuizList from "../components/QuizList";
+import ContinueQuiz from "../components/ContinueQuiz";
 
 const HomePage = () => {
   return (
