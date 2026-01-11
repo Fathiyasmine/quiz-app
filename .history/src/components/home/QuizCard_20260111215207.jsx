@@ -14,8 +14,8 @@ const QuizCard = ({ quiz }) => {
         <div className="w-20 h-20 bg-gray-300 rounded flex-shrink-0"></div>
 
         {/* Contenu principal - FLEX entre gauche et droite */}
-        <div className="flex-1 flex justify-between items-center">
-          {/* Titre */}
+        <div className="flex-1 flex justify-between items-start">
+          {/* GAUCHE : Titre + Infos */}
           <div className="flex flex-col gap-1">
             {/* Titre */}
             <h3 className="text-blue-500 font-semibold text-lg mb-1">
@@ -37,7 +37,7 @@ const QuizCard = ({ quiz }) => {
             </div>
           </div>
 
-          {/*rating */}
+          {/* DROITE : Rating */}
           <div className="flex items-center gap-1 text-sm text-gray-600">
             <Star className="text-yellow-400" fontSize="small" />
             <span className="font-semibold">{quiz.rating}</span>

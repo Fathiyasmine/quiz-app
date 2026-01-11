@@ -14,7 +14,7 @@ const QuizCard = ({ quiz }) => {
         <div className="w-20 h-20 bg-gray-300 rounded flex-shrink-0"></div>
 
         {/* Contenu principal - FLEX entre gauche et droite */}
-        <div className="flex-1 flex justify-between items-center">
+        <div className="flex-1 flex justify-between items-start">
           {/* Titre */}
           <div className="flex flex-col gap-1">
             {/* Titre */}
