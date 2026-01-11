@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { quizzes } from "../data/quizData";
 import { useQuiz } from "../context/QuizContext";
-import Header from "../components/detail/Header";
+import DetailHeader from "../components/detail/Header";
 import DetailCard from "../components/detail/DetailCard";
 
 const QuizDetailPage = () => {
@@ -20,7 +20,7 @@ const QuizDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Header />
+      <DetailHeader />
       <DetailCard quiz={quiz} />
       <button
         onClick={handleStartQuiz}
