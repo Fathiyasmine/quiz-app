@@ -3,8 +3,8 @@ import { Search, Refresh, Menu, AccountCircle } from "@mui/icons-material";
 /* Hero Section */
 
 const HeaderHomePage = () => (
-  <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 ">
-    <div className="flex items-center justify-between mb-4">
+  <div className="bg-gradient-to-br from-blue-600 to-blue-400 text-white p-6 ">
+    <div className="flex items-center justify-between mb-4 rounded-b-3xl">
       {/*Menu === humberger */}
       <Menu className="cursor-pointer" />
       {/*le cercle du compte dutilisateur */}
@@ -12,7 +12,7 @@ const HeaderHomePage = () => (
     </div>
     <h2 className="text-sm mb-1">Hello, Mohamed</h2>
     <h1 className="text-2xl font-bold mb-4">Let's test your knowledge</h1>
-    <div className="bg-white rounded-full flex items-center px-4 py-3 mb-4 ">
+    <div className="bg-white rounded-full flex items-center px-4 py-3 mb-4">
       {/*icon de recherche*/}
       <Search className="text-gray-400 mr-2" />
       {/*input de recherche*/}

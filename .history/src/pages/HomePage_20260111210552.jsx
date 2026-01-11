@@ -4,9 +4,9 @@ import QuizList from "../components/home/QuizList";
 import CurrentQuiz from "../components/home/CurrentQuiz";
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 ">
+    <div className="min-h-screen bg-gray-100">
       <HeaderHomePage />
-      <div className="p-4 bg-gray-100 rounded-t-3xl -mt-6 mb-4">
+      <div className="p-4 bg-white rounded-t-3xl mt- mb-4">
         <Categories />
         <QuizList />
         <CurrentQuiz />

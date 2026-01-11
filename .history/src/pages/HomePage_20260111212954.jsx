@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-100 ">
       <HeaderHomePage />
-      <div className="p-4 bg-gray-100 rounded-t-3xl -mt-6 mb-4">
+      <div className="p-4 bg-gray-400 rounded-t-3xl -mt-6 mb-4">
         <Categories />
         <QuizList />
         <CurrentQuiz />

@@ -3,7 +3,7 @@ import { Search, Refresh, Menu, AccountCircle } from "@mui/icons-material";
 /* Hero Section */
 
 const HeaderHomePage = () => (
-  <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 ">
+  <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-[-30px]">
     <div className="flex items-center justify-between mb-4">
       {/*Menu === humberger */}
       <Menu className="cursor-pointer" />

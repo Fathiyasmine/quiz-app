@@ -29,7 +29,7 @@ const QuizCard = ({ quiz }) => {
             <AccessTime fontSize="small" />
             {Math.floor(quiz.duration / 60)} hour {quiz.duration % 60} min
           </div>
-          <div className="rating">
+          <div>
             {/*etoile */}
             <span className="flex items-center gap-1">
               <Star className="text-yellow-400" fontSize="small" />

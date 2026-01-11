@@ -23,18 +23,16 @@ const QuizCard = ({ quiz }) => {
               <Article fontSize="small" />
               {quiz.totalQuestion} Questions
             </span>
-          </div>
-          {/*duree */}
-          <div className="flex items-center gap-1 text-sm text-gray-600">
-            <AccessTime fontSize="small" />
-            {Math.floor(quiz.duration / 60)} hour {quiz.duration % 60} min
-          </div>
-          <div className="rating">
             {/*etoile */}
             <span className="flex items-center gap-1">
               <Star className="text-yellow-400" fontSize="small" />
               {quiz.rating}
             </span>
+          </div>
+          {/*duree */}
+          <div className="flex items-center gap-1 text-sm text-gray-600">
+            <AccessTime fontSize="small" />
+            {Math.floor(quiz.duration / 60)} hour {quiz.duration % 60} min
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const Categories = () => {
 
   /* Categories: création de button pour chaque catégorie avec map qui passe sur toutes les cat de l'array */
   return (
-    <div className="flex gap-4 mb-4 overflow-x-auto rounnded-t-3xl ">
+    <div className="flex gap-4 mb-4 overflow-x-auto">
       {categories.map((cat) => (
         <button
           key={cat}
