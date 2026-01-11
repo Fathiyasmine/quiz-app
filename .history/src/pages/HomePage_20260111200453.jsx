@@ -2,6 +2,7 @@ import HeaderHomePage from "../components/Home/HeaderHomePage";
 import Categories from "../components/Home/Categories";
 import QuizList from "../components/Home/QuizList";
 import CurrentQuiz from "../components/Home/CurrentQuiz";
+
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-100">

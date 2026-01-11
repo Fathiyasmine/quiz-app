@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { quizzes } from "../data/quizData";
 import { useQuiz } from "../context/QuizContext";
-import DetailHeader from "../components/Detail/Header";
+import DetailHeader from "../components/Detail/DetailHeader";
 import DetailCard from "../components/Detail/DetailCard";
 
 const QuizDetailPage = () => {
