@@ -23,6 +23,20 @@ const Categories = () => {
           {cat}
         </button>
       ))}
+      <div className="flex flex-wrap gap-2 mt-4">
+        {filteredCategories.length > 0 ? (
+          filteredCategories.map((category) => (
+            <div
+              key={category}
+              className="bg-white text-blue-600 px-4 py-2 rounded-full font-dm"
+            >
+              {category}
+            </div>
+          ))
+        ) : (
+          <p className="text-white/70">Aucune catégorie trouvée</p>
+        )}
+      </div>
     </div>
   );
 };

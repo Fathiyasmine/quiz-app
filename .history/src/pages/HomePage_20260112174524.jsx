@@ -23,6 +23,7 @@ const HomePage = () => {
       setFilteredQuizzes(filtered);
     }
   };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header avec recherche */}
@@ -43,8 +44,9 @@ const HomePage = () => {
           </p>
         )}
       </div>
+      {/* <QuizList /> */}
       <CurrentQuiz />
-      {/* Start Quiz Button */}
+      {/* Start Quiz Button - Centré */}
       <div className="flex justify-center px-4 pb-6">
         <button className="w-full max-w-md bg-gradient-to-r from-[#3550DC] to-[#27E9F7] text-white py-4 rounded-xl font-semibold hover:shadow-lg transition-shadow">
           Start Quiz

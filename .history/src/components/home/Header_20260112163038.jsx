@@ -1,21 +1,28 @@
 import { Search, Refresh, Menu, AccountCircle } from "@mui/icons-material";
 import { useState } from "react";
 
-const HeaderHomePage = ({ onSearchChange }) => {
-  // État pour la valeur de recherche
+const HeaderHomePage = ({ onCategoriesFiltered }) => {
+  const categories = ["Popular", "Science", "Mathematic", "Computer"];
+
   const [searchValue, setSearchValue] = useState("");
-  // Gestion du changement dans le champ de recherche
+  const [filteredCategories, setFilteredCategories] = useState(categories);
+
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchValue(value);
-    // Envoyer la valeur de recherche au composant parent
-    onSearchChange(value);
-  };
-  // Gestion du clic sur l'icône de rafraîchissement
+
+    // Filtrer les catégories
+    const filtered = categories.filter((cat) =>
+      cat.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredCategories(filtered);
+
+   
+
   const handleRefresh = () => {
     setSearchValue("");
-    // Réinitialiser la recherche
-    onSearchChange("");
+    setFilteredCategories(categories);
+   
   };
 
   return (

@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeaderHomePage from "../components/home/Header";
 import Categories from "../components/home/Categories";
 import QuizCard from "../components/home/QuizCard";
+import QuizList from "../components/home/QuizList";
 import CurrentQuiz from "../components/home/CurrentQuiz";
 import { quizzes } from "../data/quizData";
 
@@ -23,12 +24,26 @@ const HomePage = () => {
       setFilteredQuizzes(filtered);
     }
   };
+
+  // Gérer le changement de catégorie
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    if (category === "Popular") {
+      setFilteredQuizzes(quizzes);
+    } else {
+      const filtered = quizzes.filter((quiz) => quiz.category === category);
+      setFilteredQuizzes(filtered);
+    }
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header avec recherche */}
       <HeaderHomePage onSearchChange={handleSearch} />
       {/* Categories */}
-      <Categories activeCategory={activeCategory} />
+      <Categories
+        activeCategory={activeCategory}
+        onCategoryChange={handleCategoryChange}
+      />
       {/* Liste des Quiz Cards */}
       <div className="p-4">
         {filteredQuizzes.length > 0 ? (
@@ -43,8 +58,9 @@ const HomePage = () => {
           </p>
         )}
       </div>
+      {/* <QuizList /> */}
       <CurrentQuiz />
-      {/* Start Quiz Button */}
+      {/* Start Quiz Button - Centré */}
       <div className="flex justify-center px-4 pb-6">
         <button className="w-full max-w-md bg-gradient-to-r from-[#3550DC] to-[#27E9F7] text-white py-4 rounded-xl font-semibold hover:shadow-lg transition-shadow">
           Start Quiz

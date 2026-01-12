@@ -1,21 +1,15 @@
 import { Search, Refresh, Menu, AccountCircle } from "@mui/icons-material";
 import { useState } from "react";
 
-const HeaderHomePage = ({ onSearchChange }) => {
-  // État pour la valeur de recherche
+const HeaderHomePage = () => {
+  const categories = ["Popular", "Science", "Mathematic", "Computer"];
+
   const [searchValue, setSearchValue] = useState("");
-  // Gestion du changement dans le champ de recherche
   const handleSearchChange = (e) => {
-    const value = e.target.value;
-    setSearchValue(value);
-    // Envoyer la valeur de recherche au composant parent
-    onSearchChange(value);
-  };
-  // Gestion du clic sur l'icône de rafraîchissement
-  const handleRefresh = () => {
-    setSearchValue("");
-    // Réinitialiser la recherche
-    onSearchChange("");
+    setSearchValue(e.target.value);
+    categories.filter((cat) =>
+      cat.toLowerCase().includes(e.target.value.toLowerCase())
+    );
   };
 
   return (
@@ -34,14 +28,11 @@ const HeaderHomePage = ({ onSearchChange }) => {
         <input
           type="text"
           placeholder="Search"
-          className="flex-1 outline-none placeholder-[#D4D4D4] font-nunito text-gray-800"
+          className="flex-1 outline-none placeholder-[#D4D4D4] font-nunito"
           value={searchValue}
           onChange={handleSearchChange}
         />
-        <Refresh
-          className="text-blue-500 cursor-pointer"
-          onClick={handleRefresh}
-        />
+        <Refresh className="text-blue-500 cursor-pointer" />
       </div>
     </div>
   );

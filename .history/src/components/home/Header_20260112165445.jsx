@@ -1,21 +1,26 @@
 import { Search, Refresh, Menu, AccountCircle } from "@mui/icons-material";
 import { useState } from "react";
+import QuizCard from "./QuizCard";
+import { quizzes } from "../../data/quizData";
 
-const HeaderHomePage = ({ onSearchChange }) => {
-  // État pour la valeur de recherche
+const HeaderHomePage = () => {
   const [searchValue, setSearchValue] = useState("");
-  // Gestion du changement dans le champ de recherche
+  const [filteredQuizCard, setFilteredQuizCard] = useState([]);
+
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchValue(value);
-    // Envoyer la valeur de recherche au composant parent
-    onSearchChange(value);
   };
-  // Gestion du clic sur l'icône de rafraîchissement
+
+  // Filtrer les catégories
+  const filtered = QuizCard.filter((cat) =>
+    cat.toLowerCase().includes(value.toLowerCase())
+  );
+  setFilteredQuizCard(filtered);
+
   const handleRefresh = () => {
     setSearchValue("");
-    // Réinitialiser la recherche
-    onSearchChange("");
+    setFilteredQuizCard(QuizCard);
   };
 
   return (

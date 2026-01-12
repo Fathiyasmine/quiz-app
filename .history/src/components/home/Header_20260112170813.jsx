@@ -11,7 +11,7 @@ const HeaderHomePage = ({ onSearchChange }) => {
     // Envoyer la valeur de recherche au composant parent
     onSearchChange(value);
   };
-  // Gestion du clic sur l'icône de rafraîchissement
+
   const handleRefresh = () => {
     setSearchValue("");
     // Réinitialiser la recherche
