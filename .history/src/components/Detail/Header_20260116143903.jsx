@@ -11,8 +11,8 @@ const Header = () => {
 
   return (
     /* Header */
-    <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-3xl pb-24 relative">
-      <div className="flex-1 flex justify-between items-center pb-5">
+    <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-3xl pb-32 relative">
+      <div className="flex-1 flex justify-between items-center">
         <div className="flex flex-row justify-start gap-2 ">
           <ArrowBack className="cursor-pointer" onClick={() => navigate("/")} />
           <h1 className="text-xl font-semibold font-ubuntu ml-1">
@@ -27,10 +27,12 @@ const Header = () => {
         <p className="text-sm mb-4 mt-2 font-nunito">
           GET {quiz.points} Points
         </p>
-      </div>
-      <div className="flex items-center gap-1 absolute top-28 right-4">
-        <Star className="text-yellow-400" />
-        <span className="text-lg font-semibold font-nunito">{quiz.rating}</span>
+        <div className="flex items-center gap-1 absolute top-92px right-4">
+          <Star className="text-yellow-400" />
+          <span className="text-lg font-semibold font-nunito">
+            {quiz.rating}
+          </span>
+        </div>
       </div>
     </div>
   );

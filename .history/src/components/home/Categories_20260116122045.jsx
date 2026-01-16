@@ -2,7 +2,7 @@ const Categories = ({ activeCategory, setActiveCategory }) => {
   const categories = ["Popular", "Science", "Mathematic", "Computer"];
 
   return (
-    <div className="flex gap-11 mb-2 rounded-t-3xl pl-6 pr-6">
+    <div className="flex gap-16 overflow-x-auto mb-2 rounded-t-3xl">
       {categories.map((cat) => (
         <button
           key={cat}

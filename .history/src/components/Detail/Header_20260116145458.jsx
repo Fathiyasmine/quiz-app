@@ -28,7 +28,7 @@ const Header = () => {
           GET {quiz.points} Points
         </p>
       </div>
-      <div className="flex items-center gap-1 absolute top-28 right-4">
+      <div className="flex items-center gap-1 absolute top-80px right-4">
         <Star className="text-yellow-400" />
         <span className="text-lg font-semibold font-nunito">{quiz.rating}</span>
       </div>

@@ -87,7 +87,7 @@ const QuizPage = () => {
           ))}
         </div>
 
-        <div className="flex gap-2 justify-between items-center mt-auto w-auto">
+        <div className="flex gap-4 justify-between items-center mt-auto w-auto">
           <button
             onClick={previousQuestion}
             disabled={currentQuestion === 0}

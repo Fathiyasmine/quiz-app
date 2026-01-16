@@ -7,7 +7,7 @@ const QuizCard = ({ quiz }) => {
   return (
     <div
       onClick={() => navigate(`/quiz/${quiz.id}`)}
-      className="bg-white rounded-lg border-2 border-transparent shadow-md hover:border-blue-400 p-6 mb-4 cursor-pointer hover:shadow-lg transition-all"
+      className="bg-white rounded-lg border-2 border-transparent shadow-md hover:border-blue-400 mb-4 mr-2 ml-2 cursor-pointer hover:shadow-lg transition-all"
     >
       <div className="flex items-start gap-4">
         {/* Image placeholder */}

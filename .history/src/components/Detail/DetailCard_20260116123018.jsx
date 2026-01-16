@@ -16,7 +16,7 @@ const DetailCard = ({ quiz, onStartQuiz }) => {
           </div>
           <div>
             <p className="font-semibold font-ubuntu">
-              {quiz.totalQuestion} Question
+              {quiz.totalQuestion} Questions
             </p>
             <p className="text-sm text-gray-500 font-nunito">
               10 point for a correct answer

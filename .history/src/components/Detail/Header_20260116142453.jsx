@@ -11,9 +11,9 @@ const Header = () => {
 
   return (
     /* Header */
-    <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-3xl pb-24 relative">
-      <div className="flex-1 flex justify-between items-center pb-5">
-        <div className="flex flex-row justify-start gap-2 ">
+    <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-3xl pb-32">
+      <div className="flex-1 flex justify-between items-center">
+        <div className="flex flex-row justify-start ">
           <ArrowBack className="cursor-pointer" onClick={() => navigate("/")} />
           <h1 className="text-xl font-semibold font-ubuntu ml-1">
             Detail Quiz
@@ -22,15 +22,15 @@ const Header = () => {
         <div className="w-10 h-10 bg-white bg-opacity-30 rounded-full"></div>
       </div>
 
-      <h2 className="text-2xl font-semibold mb-2">{quiz.title} Quiz</h2>
+      <h2 className="text-2xl font-semibold mb-2">{quiz.title}</h2>
       <div className="flex justify-between items-start ">
-        <p className="text-sm mb-4 mt-2 font-nunito">
-          GET {quiz.points} Points
-        </p>
-      </div>
-      <div className="flex items-center gap-1 absolute top-28 right-4">
-        <Star className="text-yellow-400" />
-        <span className="text-lg font-semibold font-nunito">{quiz.rating}</span>
+        <p className="text-sm mb-4 font-nunito">GET {quiz.points} Points</p>
+        <div className="flex items-start gap-1">
+          <Star className="text-yellow-400" />
+          <span className="text-lg font-semibold font-nunito">
+            {quiz.rating}
+          </span>
+        </div>
       </div>
     </div>
   );

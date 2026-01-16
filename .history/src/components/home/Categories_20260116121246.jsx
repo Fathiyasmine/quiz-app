@@ -2,12 +2,12 @@ const Categories = ({ activeCategory, setActiveCategory }) => {
   const categories = ["Popular", "Science", "Mathematic", "Computer"];
 
   return (
-    <div className="flex gap-11 mb-2 rounded-t-3xl pl-6 pr-6">
+    <div className="flex gap-1 overflow-x-auto mb-2 mr-2 ml-2  rounded-t-3xl">
       {categories.map((cat) => (
         <button
           key={cat}
           onClick={() => setActiveCategory(cat)}
-          className={`font-Nunito whitespace-nowrap flex-shrink-0 relative mt-2 gap-6 ${
+          className={` font-Nunito whitespace-nowrap flex-shrink-0 relative mt-2 ${
             activeCategory === cat ? "text-blue-500" : "text-[#999999]"
           }`}
         >

@@ -87,7 +87,7 @@ const QuizPage = () => {
           ))}
         </div>
 
-        <div className="flex gap-2 justify-between items-center mt-auto w-auto">
+        <div className="flex gap-4 justify-between items-center mt-auto w-auto">
           <button
             onClick={previousQuestion}
             disabled={currentQuestion === 0}
@@ -102,7 +102,7 @@ const QuizPage = () => {
           <button
             disabled={currentQuestion !== currentQuiz.questions.length - 1}
             onClick={handleSubmit}
-            className="flex-1 bg-white border-2 border-[#2E9DEA] text-[#2E97E9] py-3 rounded-xl font-semibold hover:bg-blue-50"
+            className="flex-1 bg-white border-2 border-blue-500 text-[#2E97E9] py-3 rounded-xl font-semibold hover:bg-blue-50"
           >
             Submit Quiz
           </button>

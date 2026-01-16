@@ -1,5 +1,5 @@
-import { Search, Menu, AccountCircle } from "@mui/icons-material";
-import CloseIcon from "@mui/icons-material/Close";
+import { Search, CloseIcon, Menu, AccountCircle } from "@mui/icons-material";
+
 const HeaderHomePage = ({ onSearchChange, searchValue }) => {
   // Gestion du changement de recherche
   const handleSearchInput = (e) => {

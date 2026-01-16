@@ -4,8 +4,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 const ContinueQuiz = () => {
   return (
     <div className="p-4">
-      <h3 className="font-semibold text-lg mb-2">Continue Quiz</h3>
-      <div className="bg-white rounded-lg p-6 mb-2  shadow-md border-2 border-transparent hover:shadow-lg hover:border-blue-400 transition">
+      <h3 className="font-semibold text-lg mb-2 ml-2">Continue Quiz</h3>
+      <div className="bg-white rounded-lg p-4 mb-2  shadow-md border-2 border-transparent hover:shadow-lg hover:border-blue-400 transition">
         <div className="flex gap-4">
           <div className="w-36 h-36 bg-gray-300 rounded flex-shrink-0"></div>
           <div className="flex flex-col justify-between flex-1">
@@ -23,12 +23,12 @@ const ContinueQuiz = () => {
                   <span>35 min</span>
                 </div>
               </div>
-              <button className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full transition">
+              <button className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-1 transition">
                 <DeleteIcon fontSize="small" />
               </button>
             </div>
             <div className="flex justify-center align-items-center">
-              <button className="w-52 h-10 px-6 bg-[#333333] text-white py-1 rounded-xl font-semibold hover:bg-[#444444] transition">
+              <button className="w-52 h-10 px-6 bg-[#333333] text-white py-3 rounded-xl font-semibold hover:bg-[#444444] transition">
                 Continue Quiz
               </button>
             </div>

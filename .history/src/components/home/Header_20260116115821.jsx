@@ -1,5 +1,5 @@
-import { Search, Menu, AccountCircle } from "@mui/icons-material";
-import CloseIcon from "@mui/icons-material/Close";
+import { Search, CloseIcon, Menu, AccountCircle } from "@mui/icons-material";
+
 const HeaderHomePage = ({ onSearchChange, searchValue }) => {
   // Gestion du changement de recherche
   const handleSearchInput = (e) => {
@@ -32,7 +32,7 @@ const HeaderHomePage = ({ onSearchChange, searchValue }) => {
           value={searchValue}
           onChange={handleSearchInput}
         />
-        <CloseIcon
+        <Refresh
           className="text-blue-500 cursor-pointer hover:rotate-180 transition-transform duration-300"
           onClick={handleRefresh}
         />

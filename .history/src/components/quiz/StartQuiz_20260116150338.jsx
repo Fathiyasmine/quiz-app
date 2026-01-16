@@ -54,7 +54,7 @@ const QuizPage = () => {
                   ? "bg-[#2F96E8] text-white"
                   : selectedAnswers[index] !== undefined
                   ? "bg-blue-100 text-blue-600"
-                  : "bg-gray-300 text-white"
+                  : "bg-gray-200 text-white"
               }`}
             >
               {index + 1}
@@ -77,7 +77,7 @@ const QuizPage = () => {
                 className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 font-semibold ${
                   selectedAnswers[currentQuestion] === index
                     ? "bg-[#2F96E8] text-white"
-                    : "bg-gray-300 text-white"
+                    : "bg-gray-300 text-gray-600"
                 }`}
               >
                 {String.fromCharCode(65 + index)}
@@ -87,32 +87,33 @@ const QuizPage = () => {
           ))}
         </div>
 
-        <div className="flex gap-2 justify-between items-center mt-auto w-auto">
+        <div className="flex gap-4 justify-between items-center mt-auto">
           <button
             onClick={previousQuestion}
             disabled={currentQuestion === 0}
-            className={`w-12 h-12 rounded-full flex items-center justify-center ${
+            className={`w-14 h-14 rounded-full flex items-center justify-center ${
               currentQuestion === 0
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                 : "bg-blue-500 text-white hover:bg-blue-600"
             }`}
           >
-            <img src="/assets/icons/left.svg" alt="" className="w-4 h-4" />
+            <ArrowLeft />
           </button>
-          <button
-            disabled={currentQuestion !== currentQuiz.questions.length - 1}
-            onClick={handleSubmit}
-            className="flex-1 bg-white border-2 border-[#2E9DEA] text-[#2E97E9] py-3 rounded-xl font-semibold hover:bg-blue-50"
-          >
-            Submit Quiz
-          </button>
-          <button
-            disabled={currentQuestion === currentQuiz.questions.length - 1}
-            onClick={nextQuestion}
-            className="w-12 h-12 rounded-full bg-[#2F96E8] text-white flex items-center justify-center"
-          >
-            <img src="/assets/icons/right.svg" alt="" className="w-4 h-4" />
-          </button>
+          {currentQuestion === currentQuiz.questions.length - 1 ? (
+            <button
+              onClick={handleSubmit}
+              className="flex-1 bg-white border-2 border-blue-500 text-blue-500 py-3 rounded-xl font-semibold hover:bg-blue-50"
+            >
+              Submit Quiz
+            </button>
+          ) : (
+            <button
+              onClick={nextQuestion}
+              className="w-14 h-14 rounded-full bg-[#2F96E8] text-white flex items-center justify-center"
+            >
+              <ArrowForward />
+            </button>
+          )}
         </div>
       </div>
     </div>
