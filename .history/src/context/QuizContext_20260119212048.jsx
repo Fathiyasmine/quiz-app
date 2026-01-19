@@ -27,9 +27,15 @@ export const QuizProvider = ({ children }) => {
     return () => clearInterval(timer);
   }, [quizInProgress, timeRemaining]);
 
-  // Fonction pour sauvgarder la progression
+  // Fonction pour SAUVEGARDER la progression
   const saveProgress = () => {
     if (!currentQuiz) return;
+    // Sauvegarder automatiquement la progression
+    useEffect(() => {
+      if (currentQuiz && quizInProgress) {
+        saveProgress();
+      }
+    }, [currentQuiz, currentQuestion, selectedAnswers, timeRemaining]);
 
     const progress = {
       quizId: currentQuiz.id,
@@ -38,23 +44,16 @@ export const QuizProvider = ({ children }) => {
       selectedAnswers: selectedAnswers,
       timeRemaining: timeRemaining,
       totalQuestions: currentQuiz.questions.length,
-      //pour filtrer seulement les qst avec reponse selectionnes
       questionsAnswered: selectedAnswers.filter((a) => a !== undefined).length,
       startTime: startTime,
       lastUpdated: new Date().toISOString(),
     };
 
     localStorage.setItem("quizInProgress", JSON.stringify(progress));
+    console.log("Progression sauvegardée");
   };
 
-  // Sauvegarder automatiquement la progression
-  useEffect(() => {
-    if (currentQuiz && quizInProgress) {
-      saveProgress();
-    }
-  }, [currentQuiz, currentQuestion, selectedAnswers, timeRemaining]);
-
-  // Fonction pour charger la progression
+  // Fonction pour CHARGER la progression
   const loadProgress = () => {
     const saved = localStorage.getItem("quizInProgress");
     if (saved) {
@@ -63,9 +62,10 @@ export const QuizProvider = ({ children }) => {
     return null;
   };
 
-  // Fonction pour supprimer la progression
+  // Fonction pour SUPPRIMER la progression
   const clearProgress = () => {
     localStorage.removeItem("quizInProgress");
+    console.log("🗑️ Progression supprimée");
   };
 
   // Fonction pour DÉMARRER un quiz
@@ -78,7 +78,7 @@ export const QuizProvider = ({ children }) => {
     setStartTime(new Date().toISOString());
   };
 
-  // Fonction pour continuer un quiz sauvegardé
+  // Fonction pour CONTINUER un quiz sauvegardé
   const continueQuiz = (quiz, savedProgress) => {
     setCurrentQuiz(quiz);
     setCurrentQuestion(savedProgress.currentQuestion);

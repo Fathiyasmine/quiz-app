@@ -27,7 +27,7 @@ export const QuizProvider = ({ children }) => {
     return () => clearInterval(timer);
   }, [quizInProgress, timeRemaining]);
 
-  // Fonction pour sauvgarder la progression
+  // Fonction pour SAUVEGARDER la progression
   const saveProgress = () => {
     if (!currentQuiz) return;
 
@@ -54,7 +54,7 @@ export const QuizProvider = ({ children }) => {
     }
   }, [currentQuiz, currentQuestion, selectedAnswers, timeRemaining]);
 
-  // Fonction pour charger la progression
+  // Fonction pour CHARGER la progression
   const loadProgress = () => {
     const saved = localStorage.getItem("quizInProgress");
     if (saved) {
@@ -63,7 +63,7 @@ export const QuizProvider = ({ children }) => {
     return null;
   };
 
-  // Fonction pour supprimer la progression
+  // Fonction pour SUPPRIMER la progression
   const clearProgress = () => {
     localStorage.removeItem("quizInProgress");
   };
@@ -78,7 +78,7 @@ export const QuizProvider = ({ children }) => {
     setStartTime(new Date().toISOString());
   };
 
-  // Fonction pour continuer un quiz sauvegardé
+  // Fonction pour CONTINUER un quiz sauvegardé
   const continueQuiz = (quiz, savedProgress) => {
     setCurrentQuiz(quiz);
     setCurrentQuestion(savedProgress.currentQuestion);

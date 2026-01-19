@@ -15,7 +15,7 @@ const QuizPage = () => {
     previousQuestion,
     setCurrentQuestion,
     startQuiz,
-    clearProgress,
+    clearProgress, // ✅ Ajouter clearProgress
   } = useQuiz();
 
   useEffect(() => {
@@ -40,9 +40,7 @@ const QuizPage = () => {
   // Fonction pour envoyer les réponses
   const handleSubmit = async () => {
     const data = {
-      //nom du quiz
       quizId: currentQuiz.id,
-      //array avec reponse selectionnes
       answers: selectedAnswers,
     };
 
@@ -56,15 +54,14 @@ const QuizPage = () => {
       });
 
       const result = await response.json();
-      console.log("Réponse du serveur :", result);
+      console.log("✅ Réponse du serveur :", result);
       alert("Quiz envoyé avec succès !");
-      //dans notre cas, ca donne une errue r car l'URL est faux
     } catch (error) {
-      console.error("Erreur :", error);
+      console.error("❌ Erreur :", error);
       alert("Erreur lors de l'envoi");
     }
 
-    //Supprimer la progression sauvegardée
+    // ✅ Supprimer la progression sauvegardée
     clearProgress();
 
     // Retour à l'accueil
@@ -72,14 +69,14 @@ const QuizPage = () => {
   };
 
   return (
-    <div className="bg-white -mt-10 rounded-t-3xl shadow-lg p-6 flex flex-col min-h-150">
+    <div className="bg-white -mt-10 rounded-t-3xl shadow-lg p-6 flex flex-col min-h-[600px]">
       {/* Numéros des questions */}
       <div className="flex gap-4 mb-2 overflow-x-scroll pb-2">
         {currentQuiz.questions.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentQuestion(index)}
-            className={`w-10 h-10 rounded-full shrink-0 font-semibold ${
+            className={`w-10 h-10 rounded-full flex-shrink-0 font-semibold ${
               index === currentQuestion
                 ? "bg-[#2F96E8] text-white"
                 : selectedAnswers[index] !== undefined
@@ -109,7 +106,7 @@ const QuizPage = () => {
               }`}
             >
               <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-semibold ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 font-semibold ${
                   selectedAnswers[currentQuestion] === index
                     ? "bg-[#2F96E8] text-white"
                     : "bg-gray-300 text-white"

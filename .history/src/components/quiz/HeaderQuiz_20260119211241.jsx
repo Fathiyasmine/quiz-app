@@ -15,7 +15,7 @@ const HeaderQuiz = () => {
 
   return (
     // Header du quiz
-    <div className="bg-linear-to-br from-blue-500 to-blue-600 text-white p-6 pb-20 rounded-b-3xl">
+    <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 pb-20 rounded-b-3xl">
       <div className="flex items-center justify-between mt-2">
         {/* Retourne à la page détail du quiz */}
         <div className="flex justify-start gap-4">
@@ -26,7 +26,7 @@ const HeaderQuiz = () => {
           {/* Titre du quiz */}
           <h1 className="text-xl font-semibold ">{quiz.title} Quiz</h1>
         </div>
-        {/*  TIMER  */}
+        {/*  TIMER - Change de couleur si < 60 secondes */}
         <div
           className={`px-3 py-1 rounded-full text-sm font-semibold transition ${
             timeRemaining < 60

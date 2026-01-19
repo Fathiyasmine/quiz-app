@@ -63,7 +63,7 @@ export const QuizProvider = ({ children }) => {
     return null;
   };
 
-  // Fonction pour supprimer la progression
+  // Fonction pour SUPPRIMER la progression
   const clearProgress = () => {
     localStorage.removeItem("quizInProgress");
   };

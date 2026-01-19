@@ -56,7 +56,7 @@ const CurrentQuiz = () => {
           <div className="flex flex-col justify-between flex-1">
             {/* Informations du quiz */}
             <div className="flex justify-between items-start mb-3">
-              <div className="flex flex-col gap-2 flex-1 relative">
+              <div className="flex flex-col gap-2 flex-1">
                 {/* Titre du quiz */}
                 <h3 className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] bg-clip-text text-transparent font-semibold text-lg">
                   {savedProgress.quizTitle}
@@ -80,7 +80,7 @@ const CurrentQuiz = () => {
                 </div>
 
                 {/* Barre de progression */}
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-2 relative">
                   <div
                     className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] h-2 rounded-full transition-all"
                     style={{
@@ -91,10 +91,10 @@ const CurrentQuiz = () => {
               </div>
 
               {/* Bouton Supprimer */}
-              <div className="absolute right-22">
+              <div className="absolute top-20 right-2">
                 <button
                   onClick={handleDelete}
-                  className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "
+                  className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition"
                 >
                   <DeleteIcon />
                 </button>

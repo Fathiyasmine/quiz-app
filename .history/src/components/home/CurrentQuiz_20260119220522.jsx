@@ -91,7 +91,7 @@ const CurrentQuiz = () => {
               </div>
 
               {/* Bouton Supprimer */}
-              <div className="absolute right-22">
+              <div className="absolute top-55 right-20">
                 <button
                   onClick={handleDelete}
                   className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "

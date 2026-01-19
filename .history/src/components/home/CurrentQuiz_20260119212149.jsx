@@ -4,7 +4,7 @@ import { useQuiz } from "../../context/QuizContext";
 import { useNavigate } from "react-router-dom";
 import { quizzes } from "../../data/quizData";
 
-const CurrentQuiz = () => {
+const ContinueQuiz = () => {
   const { loadProgress, clearProgress, continueQuiz } = useQuiz();
   const navigate = useNavigate();
 
@@ -24,8 +24,8 @@ const CurrentQuiz = () => {
   }
 
   // Calculer le temps écoulé
-  //const timeSpent = quiz.duration * 60 - savedProgress.timeRemaining;
-  //const timeSpentMinutes = Math.floor(timeSpent / 60);
+  const timeSpent = quiz.duration * 60 - savedProgress.timeRemaining;
+  const timeSpentMinutes = Math.floor(timeSpent / 60);
 
   // Fonction pour continuer le quiz
   const handleContinue = () => {
@@ -47,18 +47,18 @@ const CurrentQuiz = () => {
     <div className="p-4">
       <h3 className="font-semibold text-lg mb-2">Continue Quiz</h3>
 
-      <div className="bg-white rounded-lg p-6 mb-2 shadow-md border-2 border-transparent hover:shadow-lg hover:border-blue-400 transition ">
+      <div className="bg-white rounded-lg p-6 mb-2 shadow-md border-2 border-transparent hover:shadow-lg hover:border-blue-400 transition relative">
         <div className="flex gap-4">
           {/* Image placeholder */}
-          <div className="w-36 h-36 bg-gray-300 rounded shrink-0"></div>
+          <div className="w-36 h-36 bg-gray-300 rounded flex-shrink-0"></div>
 
           {/* Contenu */}
           <div className="flex flex-col justify-between flex-1">
             {/* Informations du quiz */}
             <div className="flex justify-between items-start mb-3">
-              <div className="flex flex-col gap-2 flex-1 relative">
+              <div className="flex flex-col gap-2 flex-1">
                 {/* Titre du quiz */}
-                <h3 className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] bg-clip-text text-transparent font-semibold text-lg">
+                <h3 className="bg-gradient-to-r from-[#3550DC] to-[#27E9F7] bg-clip-text text-transparent font-semibold text-lg">
                   {savedProgress.quizTitle}
                 </h3>
 
@@ -82,7 +82,7 @@ const CurrentQuiz = () => {
                 {/* Barre de progression */}
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                   <div
-                    className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] h-2 rounded-full transition-all"
+                    className="bg-gradient-to-r from-[#3550DC] to-[#27E9F7] h-2 rounded-full transition-all"
                     style={{
                       width: `${(savedProgress.questionsAnswered / savedProgress.totalQuestions) * 100}%`,
                     }}
@@ -91,10 +91,10 @@ const CurrentQuiz = () => {
               </div>
 
               {/* Bouton Supprimer */}
-              <div className="absolute right-22">
+              <div className="absolute top-6 right-2">
                 <button
                   onClick={handleDelete}
-                  className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "
+                  className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition"
                 >
                   <DeleteIcon />
                 </button>
@@ -117,4 +117,4 @@ const CurrentQuiz = () => {
   );
 };
 
-export default CurrentQuiz;
+export default ContinueQuiz;
