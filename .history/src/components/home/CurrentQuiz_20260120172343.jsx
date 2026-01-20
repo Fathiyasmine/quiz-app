@@ -80,7 +80,7 @@ const CurrentQuiz = () => {
                 </div>
 
                 {/* Barre de progression */}
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-2 relative">
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                   <div
                     className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] h-2 rounded-full transition-all"
                     style={{
@@ -88,22 +88,24 @@ const CurrentQuiz = () => {
                     }}
                   ></div>
                 </div>
-                {/* Bouton Supprimer */}
-                <div className="absolute right-0 top-0">
-                  <button
-                    onClick={handleDelete}
-                    className="shrink-0 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "
-                  >
-                    <DeleteIcon />
-                  </button>
-                </div>
+              </div>
+
+              {/* Bouton Supprimer */}
+              <div className="absolute right-22">
+                <button
+                  onClick={handleDelete}
+                  className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "
+                >
+                  <DeleteIcon />
+                </button>
               </div>
             </div>
+
             {/* Bouton Continue */}
-            <div className="flex justify-center align-center w-full">
+            <div className="flex justify-center align-center">
               <button
                 onClick={handleContinue}
-                className="w-full px-6 py-3 bg-[#333333] text-white rounded-xl font-semibold hover:bg-[#444444] transition"
+                className="w-auto h-auto px-10 p-4 bg-[#333333] text-white rounded-xl font-semibold hover:bg-[#444444] transition"
               >
                 Continue Quiz
               </button>

@@ -99,6 +99,7 @@ const CurrentQuiz = () => {
                 </div>
               </div>
             </div>
+
             {/* Bouton Continue */}
             <div className="flex justify-center align-center w-full">
               <button

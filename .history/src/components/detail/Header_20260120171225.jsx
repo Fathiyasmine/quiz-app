@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     /* Header */
-    <div className="bg-linear-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-3xl pb-24">
+    <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-3xl pb-24">
       <div className="flex-1 flex justify-between items-center pb-5">
         <div className="flex flex-row justify-start gap-2 ">
           <ArrowBack className="cursor-pointer" onClick={() => navigate("/")} />

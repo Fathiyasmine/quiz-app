@@ -53,7 +53,7 @@ const CurrentQuiz = () => {
           <div className="w-38 h-38 bg-gray-300 rounded shrink-0"></div>
 
           {/* Contenu */}
-          <div className="flex flex-col justify-between flex-1">
+          <div className="flex flex-col justify-between flex-1 relative">
             {/* Informations du quiz */}
             <div className="flex justify-between items-start mb-3">
               <div className="flex flex-col gap-1 flex-1 relative">
@@ -80,7 +80,7 @@ const CurrentQuiz = () => {
                 </div>
 
                 {/* Barre de progression */}
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-2 relative">
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                   <div
                     className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] h-2 rounded-full transition-all"
                     style={{

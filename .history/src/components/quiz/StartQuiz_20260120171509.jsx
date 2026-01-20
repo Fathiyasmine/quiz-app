@@ -72,7 +72,7 @@ const QuizPage = () => {
   };
 
   return (
-    <div className="bg-white -mt-10 rounded-t-3xl shadow-lg p-6 flex flex-col h-full">
+    <div className="bg-white -mt-10 rounded-t-3xl shadow-lg p-6 flex flex-col min-h-150">
       {/* Numéros des questions */}
       <div className="flex gap-4 mb-2 overflow-x-scroll pb-2">
         {currentQuiz.questions.map((_, index) => (
@@ -97,7 +97,7 @@ const QuizPage = () => {
 
       {/* Options */}
       <div className="flex flex-col justify-between flex-1 h-full">
-        <div className="space-y-4 mb-18 h-full">
+        <div className="space-y-4 mb-8 h-full">
           {question.options.map((option, index) => (
             <div
               key={index}

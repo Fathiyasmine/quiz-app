@@ -2,7 +2,7 @@ import { AccessTime, Article, StarOutline } from "@mui/icons-material";
 
 const DetailCard = ({ quiz, onStartQuiz }) => {
   return (
-    <div className="bg-white -mt-24 rounded-t-3xl p-6 pb-24 relative min-h-full shadow-md">
+    <div className="bg-white -mt-24 rounded-3xl p-6 pb-24 relative min-h-full shadow-md">
       <div className="flex justify-center mb-4">
         <div className="h-1 bg-blue-600 w-16 rounded-md"></div>
       </div>

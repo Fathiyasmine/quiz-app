@@ -19,7 +19,7 @@ const HeaderQuiz = () => {
       <div className="flex items-center justify-between mt-2">
         {/* Retourne à la page détail du quiz */}
         <div className="flex justify-start gap-4">
-          <ArrowBack className="cursor-pointer" onClick={() => navigate("/")} />
+          <ArrowBack className="cursor-pointer" onClick={() => navigate(`/`)} />
           {/* Titre du quiz */}
           <h1 className="text-xl font-semibold ">{quiz.title} Quiz</h1>
         </div>

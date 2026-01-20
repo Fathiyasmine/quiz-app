@@ -2,7 +2,6 @@ import { ArrowBack, Star } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { quizzes } from "../../data/quizData";
 import { useParams } from "react-router-dom";
-import { AccountCircle } from "@mui/icons-material";
 
 const Header = () => {
   const { id } = useParams();
@@ -12,7 +11,7 @@ const Header = () => {
 
   return (
     /* Header */
-    <div className="bg-linear-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-3xl pb-24">
+    <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-b-3xl pb-24">
       <div className="flex-1 flex justify-between items-center pb-5">
         <div className="flex flex-row justify-start gap-2 ">
           <ArrowBack className="cursor-pointer" onClick={() => navigate("/")} />
@@ -20,7 +19,7 @@ const Header = () => {
             Detail Quiz
           </h1>
         </div>
-        <AccountCircle className="w-10 h-10" />
+        <div className="w-10 h-10 bg-white bg-opacity-30 rounded-full"></div>
       </div>
       <div className="flex justify-between">
         <div className="flex flex-col items-start ">

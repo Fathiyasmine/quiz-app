@@ -88,17 +88,18 @@ const CurrentQuiz = () => {
                     }}
                   ></div>
                 </div>
-                {/* Bouton Supprimer */}
-                <div className="absolute right-0 top-0">
-                  <button
-                    onClick={handleDelete}
-                    className="shrink-0 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "
-                  >
-                    <DeleteIcon />
-                  </button>
-                </div>
+              </div>
+              {/* Bouton Supprimer */}
+              <div className="absolute right-0 top-0">
+                <button
+                  onClick={handleDelete}
+                  className="shrink-0 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "
+                >
+                  <DeleteIcon />
+                </button>
               </div>
             </div>
+
             {/* Bouton Continue */}
             <div className="flex justify-center align-center w-full">
               <button

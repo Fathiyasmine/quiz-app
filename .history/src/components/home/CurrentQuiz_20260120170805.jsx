@@ -50,13 +50,13 @@ const CurrentQuiz = () => {
       <div className="bg-white rounded-lg p-6 mb-2 shadow-md border-2 border-transparent hover:shadow-lg hover:border-blue-400 transition ">
         <div className="flex gap-4">
           {/* Image placeholder */}
-          <div className="w-38 h-38 bg-gray-300 rounded shrink-0"></div>
+          <div className="w-36 h-36 bg-gray-300 rounded shrink-0"></div>
 
           {/* Contenu */}
           <div className="flex flex-col justify-between flex-1">
             {/* Informations du quiz */}
-            <div className="flex justify-between items-start mb-3">
-              <div className="flex flex-col gap-1 flex-1 relative">
+            <div className="flex justify-between items-start">
+              <div className="flex flex-col gap-2 flex-1 relative">
                 {/* Titre du quiz */}
                 <h3 className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] bg-clip-text text-transparent font-semibold text-lg">
                   {savedProgress.quizTitle}
@@ -80,7 +80,7 @@ const CurrentQuiz = () => {
                 </div>
 
                 {/* Barre de progression */}
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-2 relative">
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                   <div
                     className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] h-2 rounded-full transition-all"
                     style={{
@@ -88,22 +88,24 @@ const CurrentQuiz = () => {
                     }}
                   ></div>
                 </div>
-                {/* Bouton Supprimer */}
-                <div className="absolute right-0 top-0">
-                  <button
-                    onClick={handleDelete}
-                    className="shrink-0 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "
-                  >
-                    <DeleteIcon />
-                  </button>
-                </div>
+              </div>
+
+              {/* Bouton Supprimer */}
+              <div className="absolute right-22">
+                <button
+                  onClick={handleDelete}
+                  className="text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full p-2 transition "
+                >
+                  <DeleteIcon />
+                </button>
               </div>
             </div>
+
             {/* Bouton Continue */}
-            <div className="flex justify-center align-center w-full">
+            <div className="flex justify-center align-center">
               <button
                 onClick={handleContinue}
-                className="w-full px-6 py-3 bg-[#333333] text-white rounded-xl font-semibold hover:bg-[#444444] transition"
+                className="w-auto h-auto px-12 py-2 bg-[#333333] text-white rounded-xl font-semibold hover:bg-[#444444] transition"
               >
                 Continue Quiz
               </button>
