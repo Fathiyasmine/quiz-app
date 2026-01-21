@@ -8,7 +8,7 @@ function App() {
   return (
     <QuizProvider>
       <BrowserRouter>
-        <div className="max-w-md mx-auto bg-white h-full">
+        <div className="max-w-md mx-auto bg-white min-h-screen">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/quiz/:id" element={<QuizDetailPage />} />

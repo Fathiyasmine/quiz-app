@@ -6,7 +6,7 @@ import SearchOffIcon from "@mui/icons-material/SearchOff";
 
 const QuizList = ({ filteredQuizzes }) => {
   return (
-    <div className="p-4 h-full">
+    <div className="p-4">
       {filteredQuizzes.length > 0 ? (
         <div className="space-y-4">
           {filteredQuizzes.map((quiz) => (

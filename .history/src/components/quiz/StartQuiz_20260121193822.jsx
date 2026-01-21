@@ -93,7 +93,7 @@ const QuizPage = () => {
       </div>
 
       {/* Question */}
-      <h2 className="text-lg font-semibold mb-6 mt-4 ">{question.question}</h2>
+      <h2 className="text-lg font-semibold mb-6 mt-4">{question.question}</h2>
 
       {/* Options */}
       <div className="flex flex-col justify-between flex-1 min-h-screen">

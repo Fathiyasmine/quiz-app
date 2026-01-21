@@ -51,7 +51,7 @@ const HomePage = () => {
         />
       </div>
       <div className="-mt-28 pb-8">
-        <div className="bg-gray-50 rounded-3xl shadow-xl min-h-screen">
+        <div className="bg-gray-50 rounded-3xl shadow-xl min-h-[calc(100vh-6rem)]">
           <div className="flex justify-center mb-2">
             <div className="h-1 bg-blue-600 w-16 rounded-md mt-3"></div>
           </div>

@@ -11,13 +11,13 @@ const QuizCard = ({ quiz }) => {
     >
       <div className="flex items-start gap-4">
         {/* Image placeholder */}
-        <div className="w-20 h-20 bg-gray-300 rounded shrink-0"></div>
+        <div className="w-20 h-20 bg-gray-300 rounded flex-shrink-0"></div>
         {/* Contenu principal - FLEX entre gauche et droite */}
         <div className="flex-1 flex justify-between items-center">
           {/* Titre */}
           <div className="flex flex-col gap-1">
             {/* Titre */}
-            <h3 className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] bg-clip-text text-transparent font-semibold text-lg mb-1 font-ubuntu">
+            <h3 className="bg-gradient-to-r from-[#3550DC] to-[#27E9F7] bg-clip-text text-transparent font-semibold text-lg mb-1 font-ubuntu">
               {quiz.title}
             </h3>
             {/* Nombre de questions */}

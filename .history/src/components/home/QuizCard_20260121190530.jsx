@@ -17,7 +17,7 @@ const QuizCard = ({ quiz }) => {
           {/* Titre */}
           <div className="flex flex-col gap-1">
             {/* Titre */}
-            <h3 className="bg-linear-to-r from-[#3550DC] to-[#27E9F7] bg-clip-text text-transparent font-semibold text-lg mb-1 font-ubuntu">
+            <h3 className="bg-gradient-to-r from-[#3550DC] to-[#27E9F7] bg-clip-text text-transparent font-semibold text-lg mb-1 font-ubuntu">
               {quiz.title}
             </h3>
             {/* Nombre de questions */}

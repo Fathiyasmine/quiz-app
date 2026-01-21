@@ -7,7 +7,7 @@ const Categories = ({ activeCategory, setActiveCategory }) => {
         <button
           key={cat}
           onClick={() => setActiveCategory(cat)}
-          className={`font-Nunito whitespace-nowrap shrink-0 relative mt-2 gap-6 ${
+          className={`font-Nunito whitespace-nowrap flex-shrink-0 relative mt-2 gap-6 ${
             activeCategory === cat ? "text-blue-500" : "text-[#999999]"
           }`}
         >
