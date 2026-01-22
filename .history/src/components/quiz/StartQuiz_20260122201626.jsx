@@ -16,7 +16,6 @@ const QuizPage = () => {
     setCurrentQuestion,
     startQuiz,
     clearProgress,
-    areAllQuestionsAnswered,
   } = useQuiz();
 
   useEffect(() => {

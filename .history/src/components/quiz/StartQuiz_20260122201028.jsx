@@ -16,7 +16,6 @@ const QuizPage = () => {
     setCurrentQuestion,
     startQuiz,
     clearProgress,
-    areAllQuestionsAnswered,
   } = useQuiz();
 
   useEffect(() => {
@@ -70,6 +69,14 @@ const QuizPage = () => {
 
     // Retour à l'accueil
     navigate("/");
+  };
+  // Fonction pour vérifier si toutes les questions ont été répondues
+  const areAllQuestionsAnswered = () => {
+    return currentQuiz.questions.every(
+      (question, index) =>
+        currentQuiz.questions[index].selectedAnswer !== undefined &&
+        currentQuiz.questions[index].selectedAnswer !== null,
+    );
   };
 
   return (

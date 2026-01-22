@@ -111,7 +111,6 @@ export const QuizProvider = ({ children }) => {
     const secs = seconds % 60;
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
-  //verifier que toute les qst ont une reponse selectionne avant le submit
   const areAllQuestionsAnswered = () => {
     return currentQuiz.questions.every(
       (_, index) =>

@@ -16,7 +16,6 @@ const QuizPage = () => {
     setCurrentQuestion,
     startQuiz,
     clearProgress,
-    areAllQuestionsAnswered,
   } = useQuiz();
 
   useEffect(() => {
@@ -70,6 +69,14 @@ const QuizPage = () => {
 
     // Retour à l'accueil
     navigate("/");
+  };
+  // Fonction pour vérifier si toutes les questions ont été répondues
+  const areAllQuestionsAnswered = () => {
+    return currentQuiz.questions.every(
+      (question, index) =>
+        currentQuiz.questions[index].selectedAnswer !== undefined &&
+        currentQuiz.questions[index].selectedAnswer !== null,
+    );
   };
 
   return (
@@ -144,10 +151,13 @@ const QuizPage = () => {
 
           {/* Bouton Submit */}
           <button
-            disabled={!areAllQuestionsAnswered()}
+            disabled={
+              currentQuestion !== currentQuiz.questions.length - 1 &&
+              currentQuiz !== currentQuiz.selectAnswer
+            }
             onClick={handleSubmit}
             className={`flex-1 border-2 py-3 rounded-xl font-semibold transition ${
-              areAllQuestionsAnswered()
+              currentQuestion === currentQuiz.questions.length - 1
                 ? "bg-white border-[#2E9DEA] text-[#2E97E9] hover:bg-blue-50"
                 : "bg-gray-100 border-gray-300 text-gray-400 cursor-not-allowed"
             }`}

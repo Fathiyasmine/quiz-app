@@ -47,7 +47,7 @@ const CurrentQuiz = () => {
     <div className="p-4">
       <h3 className="font-semibold text-lg mb-2">Continue Quiz</h3>
 
-      <div className="bg-white rounded-lg p-6 mb-2 shadow-md border-2 border-transparent hover:shadow-lg hover:border-blue-400 transition ">
+      <div className="bg-white rounded-lg p-6 mb-2 border-2 border-transparent hover:shadow-lg hover:border-blue-400 transition ">
         <div className="flex gap-4">
           {/* Image placeholder */}
           <div className="w-38 h-38 bg-gray-300 rounded shrink-0"></div>

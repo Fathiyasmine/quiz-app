@@ -11,15 +11,14 @@ const HeaderHomePage = ({ onSearchChange, searchValue }) => {
   const handleRefresh = () => {
     onSearchChange("");
   };
-  //  Utiliser import.meta.env avec Vite
-  const userName = import.meta.env.VITE_USERNAME;
+  const userName = process.env.REACT_APP_VAR_USERNAME;
   return (
     <div className="bg-linear-to-br from-blue-500 to-blue-600 text-[#FFFFFF] p-6">
       <div className="flex items-center justify-between mb-4">
         <Menu className="cursor-pointer" />
         <AccountCircle className="w-10 h-10" />
       </div>
-      <h2 className="text-sm mb-1 font-dm">Hello, {userName}</h2>
+      <h2 className="text-sm mb-1 font-dm">Hello,</h2>
       <h1 className="text-2xl font-bold mb-4 font-ubuntu">
         Let's test your knowledge
       </h1>
