@@ -2,6 +2,9 @@ import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useQuiz } from "../../context/QuizContext";
 import { quizzes } from "../../data/quizData";
+// Importer les icônes en haut du fichier
+import IconGauche from "./assets/gauche.svg";
+import IconRight from "./assets/right.svg";
 
 const QuizPage = () => {
   const { id } = useParams();
@@ -59,7 +62,7 @@ const QuizPage = () => {
       const result = await response.json();
       console.log("Réponse du serveur :", result);
       alert("Quiz envoyé avec succès !");
-      //dans notre cas, ca donne une erreur car l'URL est faux
+      //dans notre cas, ca donne une errue r car l'URL est faux
     } catch (error) {
       console.error("Erreur :", error);
       alert("Erreur lors de l'envoi");
@@ -94,7 +97,7 @@ const QuizPage = () => {
       </div>
 
       {/* Question */}
-      <h2 className="text-lg font-semibold mb-6 mt-4">{question.question}</h2>
+      <h2 className="text-lg font-semibold mb-6 mt-4 ">{question.question}</h2>
 
       {/* Options */}
       <div className="flex flex-col justify-between flex-1 min-h-screen">
@@ -135,7 +138,7 @@ const QuizPage = () => {
                 : "bg-[#2F96E8] text-white hover:bg-blue-700"
             }`}
           >
-            <img src="/assets/gauche.svg" alt="Previous" className="w-4 h-4" />
+            <img src={IconGauche} alt="Previous" className="w-4 h-4" />
           </button>
 
           {/* Bouton Submit */}
@@ -144,7 +147,7 @@ const QuizPage = () => {
             onClick={handleSubmit}
             className={`flex-1 border-2 py-3 rounded-xl font-semibold transition ${
               areAllQuestionsAnswered()
-                ? "bg-white border-[#2E9DEA] text-[#2E97E9] hover:bg-blue-50 cursor-pointer"
+                ? "bg-white border-[#2E9DEA] text-[#2E97E9] hover:bg-blue-50"
                 : "bg-gray-100 border-gray-300 text-gray-400 cursor-not-allowed"
             }`}
           >
@@ -161,7 +164,7 @@ const QuizPage = () => {
                 : "bg-[#2F96E8] text-white hover:bg-blue-700"
             }`}
           >
-            <img src="/assets/right.svg" alt="Next" className="w-4 h-4" />
+            <img src={IconRight} alt="Next" className="w-4 h-4" />
           </button>
         </div>
       </div>
