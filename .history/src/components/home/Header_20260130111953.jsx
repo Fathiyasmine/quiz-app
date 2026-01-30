@@ -19,7 +19,7 @@ const HeaderHomePage = ({ onSearchChange, searchValue }) => {
   return (
     <div className="bg-linear-to-br from-blue-500 to-blue-600 text-[#FFFFFF] p-6">
       <div className="flex items-center justify-between mb-4">
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col">
           <ArrowBack className="cursor-pointer" onClick={() => navigate("/")} />
           <Menu className="cursor-pointer" />
         </div>

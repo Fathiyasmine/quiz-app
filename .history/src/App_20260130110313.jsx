@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <div className="max-w-md mx-auto bg-white h-full">
           <Routes>
-            <Route path="/" element={<LoginPage />} />
-            <Route path="/home" element={<HomePage />} />
+            <Route path="/log" element={<LoginPage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/quiz/:id" element={<QuizDetailPage />} />
             <Route path="/quiz/:id/start" element={<QuizPage />} />
           </Routes>

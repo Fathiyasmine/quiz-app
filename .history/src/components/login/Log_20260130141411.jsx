@@ -89,7 +89,7 @@ const Log = () => {
         >
           <AppleIcon
             style={{
-              color: "white",
+              color: "gray",
             }}
           />
           Apple

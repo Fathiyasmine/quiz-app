@@ -1,7 +1,5 @@
 import { Search, Menu, AccountCircle } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
-import { ArrowBack } from "@mui/icons-material";
-import { Navigate, useNavigate } from "react-router-dom";
 const HeaderHomePage = ({ onSearchChange, searchValue }) => {
   // Gestion du changement de recherche
   const handleSearchInput = (e) => {
@@ -15,14 +13,12 @@ const HeaderHomePage = ({ onSearchChange, searchValue }) => {
   };
   //  Utiliser import.meta.env avec Vite
   const userName = import.meta.env.VITE_USERNAME;
-  const navigate = useNavigate("/");
   return (
     <div className="bg-linear-to-br from-blue-500 to-blue-600 text-[#FFFFFF] p-6">
       <div className="flex items-center justify-between mb-4">
-        <div className="flex flex-col gap-3">
-          <ArrowBack className="cursor-pointer" onClick={() => navigate("/")} />
-          <Menu className="cursor-pointer" />
-        </div>
+        <ArrowBack className="cursor-pointer" onClick={() => navigate("/")} />
+
+        <Menu className="cursor-pointer" />
         <AccountCircle className="w-10 h-10" />
       </div>
       <h2 className="text-sm mb-1 font-dm">Hello, {userName}</h2>

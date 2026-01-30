@@ -2,7 +2,6 @@ import { TextField, Button, Box } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import GoogleIcon from "@mui/icons-material/Google";
-import AppleIcon from "@mui/icons-material/Apple";
 const Log = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -87,11 +86,6 @@ const Log = () => {
           onClick={() => navigate("/home")}
           className="flex-1 bg-black text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow"
         >
-          <AppleIcon
-            style={{
-              color: "white",
-            }}
-          />
           Apple
         </button>
       </div>

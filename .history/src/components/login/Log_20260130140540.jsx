@@ -80,7 +80,11 @@ const Log = () => {
           onClick={() => navigate("/home")}
           className="flex-1 bg-white border-2 border-gray-300 text-gray-700 py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow"
         >
-          <GoogleIcon />
+          <GoogleIcon
+            style={{
+              color: "gray",
+            }}
+          />
           Google
         </button>
         <button
@@ -89,7 +93,7 @@ const Log = () => {
         >
           <AppleIcon
             style={{
-              color: "white",
+              color: "gray",
             }}
           />
           Apple
