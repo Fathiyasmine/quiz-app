@@ -11,8 +11,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-
-const Log = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -30,12 +29,13 @@ const Log = () => {
   return (
     <div className="bg-white -mt-10 rounded-t-3xl shadow-lg p-6 flex flex-col min-h-screen">
       <div className="flex justify-center mb-4">
-        <div className="h-1 bg-blue-600 w-16 rounded-md"></div>
+        <div className="h-1 bg-white w-16 rounded-md"></div>
       </div>
-      <h2 className="text-2xl font-bold mb-4 font-ubuntu">Welcome Back!</h2>
-      <h3 className="text-md mb-1 font-dm text-gray-600">
-        Please enter your details to sign in
-      </h3>
+      <h2 className="text-2xl font-bold mb-4 font-ubuntu">Sign Up</h2>
+      <div>
+        {" "}
+        <img src="/assets/right.svg" alt="Next" className="w-4 h-4" />
+      </div>
 
       <Box component="form" onSubmit={handleSubmit}>
         {/* Email Field */}
@@ -118,4 +118,4 @@ const Log = () => {
   );
 };
 
-export default Log;
+export default SignUp;

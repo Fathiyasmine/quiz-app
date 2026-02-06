@@ -1,30 +1,16 @@
-import {
-  TextField,
-  Button,
-  Box,
-  InputAdornment,
-  IconButton,
-} from "@mui/material";
+import { TextField, Button, Box } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
-
 const Log = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ email, password });
-  };
-
-  const handleClickShowPassword = () => {
-    setShowPassword(!showPassword);
   };
 
   return (
@@ -49,11 +35,6 @@ const Log = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              borderRadius: "12px",
-            },
-          }}
         />
 
         {/* Password Field */}
@@ -71,28 +52,10 @@ const Log = () => {
         <TextField
           fullWidth
           placeholder="Enter your password"
-          type={showPassword ? "text" : "password"}
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              borderRadius: "12px",
-            },
-          }}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  onClick={handleClickShowPassword}
-                  edge="end"
-                  aria-label="toggle password visibility"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
         />
 
         <button
