@@ -5,7 +5,6 @@ import QuizDetailPage from "./pages/QuizDetailPage";
 import QuizPage from "./pages/QuizPage";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
-import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (

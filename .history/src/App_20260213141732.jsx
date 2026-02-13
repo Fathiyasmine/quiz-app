@@ -5,7 +5,6 @@ import QuizDetailPage from "./pages/QuizDetailPage";
 import QuizPage from "./pages/QuizPage";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
-import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
         <div className="max-w-md mx-auto bg-white h-full">
           <Routes>
             <Route path="/" element={<LoginPage />} />
-            <Route path="/pro" element={<ProfilePage />} />
+            <Route path="/" element={<LoginPage />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/quiz/:id" element={<QuizDetailPage />} />

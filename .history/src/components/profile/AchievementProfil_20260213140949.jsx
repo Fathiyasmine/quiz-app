@@ -97,7 +97,7 @@ const Log = () => {
 
         <button
           type="submit"
-          onClick={() => navigate("/pro")}
+          onClick={() => navigate("/home")}
           className="w-full mt-6 bg-linear-to-r from-[#3550DC] to-[#27E9F7] text-white py-4 rounded-xl font-semibold hover:shadow-lg transition-shadow"
         >
           Sign In
