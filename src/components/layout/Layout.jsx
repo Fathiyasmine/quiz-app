@@ -1,0 +1,22 @@
+import { useLocation } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import BottomNav from "./BottomNav";
+
+const NO_NAV_ROUTES = ["/", "/signup"];
+
+const Layout = ({ children }) => {
+  const location = useLocation();
+  const hideNav = NO_NAV_ROUTES.includes(location.pathname);
+
+  if (hideNav) return <>{children}</>;
+
+  return (
+    <div className="flex min-h-screen">
+      <Sidebar />
+      <main className="flex-1 md:ml-64 min-h-screen">{children}</main>
+      <BottomNav />
+    </div>
+  );
+};
+
+export default Layout;
